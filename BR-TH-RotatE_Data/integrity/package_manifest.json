@@ -1,0 +1,13 @@
+{
+  "package_version": "1.0",
+  "purpose": "reviewer reproducibility of CRH-L4MKG structure and frozen R14 split",
+  "initial_extraction_personnel": 1,
+  "expert_reviewers": 2,
+  "r14_triples": 17430,
+  "train_triples": 15413,
+  "validation_triples": 1009,
+  "test_triples": 1008,
+  "main_candidate_entities": 13693,
+  "retrospective_structural_sample_size": 280,
+  "retrospective_structural_pass": 280
+}

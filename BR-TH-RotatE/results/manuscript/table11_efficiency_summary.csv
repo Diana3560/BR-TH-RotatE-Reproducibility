@@ -1,0 +1,4 @@
+﻿model,repeat_count,ms_per_update_n,ms_per_update_mean,ms_per_update_std,positive_instances_per_second_n,positive_instances_per_second_mean,positive_instances_per_second_std,eval_queries_per_second_n,eval_queries_per_second_mean,eval_queries_per_second_std,gpu_peak_allocated_bytes_n,gpu_peak_allocated_bytes_mean,gpu_peak_allocated_bytes_std,gpu_peak_reserved_bytes_n,gpu_peak_reserved_bytes_mean,gpu_peak_reserved_bytes_std
+D0,5,5,45.67003869987093,0.18249220496039414,5,22421.988487101575,89.606399368918,5,539.1638258547257,70.96617018444537,5,1174227968.0,0.0,5,1430257664.0,0.0
+D1,5,5,42.82230689993594,0.11431460039736509,5,23912.90656679659,63.68263181322531,5,567.7881340661227,71.42281894240112,5,1174392320.0,0.0,5,1451229184.0,0.0
+D2,5,5,44.35405479965266,0.06405556695441154,5,23086.992030682177,33.3633874947506,5,504.4683098964264,28.69021088377295,5,1174461952.0,0.0,5,1451229184.0,0.0

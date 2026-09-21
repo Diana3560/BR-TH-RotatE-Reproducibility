@@ -1,0 +1,23 @@
+{
+  "protocol_version": "supplementary-v1",
+  "embedding_dim": 200,
+  "max_steps": 3000,
+  "batch_size": 1024,
+  "num_negatives": 64,
+  "evaluation_batch_size": 10,
+  "evaluation_slice_size": 2048,
+  "core_seeds": [42,43,44,45,46,47,48,49,50,51],
+  "split_seeds": [2026091401,2026091402,2026091403,2026091404,2026091405],
+  "split_training_seeds": [42,43,44],
+  "baseline_models": ["RatE","RatE_recip","CompoundE","CompoundE_recip","PairRE","PairRE_recip","D2_tuned"],
+  "baseline_seeds": [42,43,44,45,46],
+  "tuning_seeds": [42,43],
+  "shortlist_size": 2,
+  "mechanism_seeds": [42,43,44,45,46],
+  "bootstrap_repeats": 10000,
+  "bootstrap_seed": 20260914,
+  "efficiency_repeats": 5,
+  "efficiency_warmup_steps": 20,
+  "efficiency_measured_steps": 200,
+  "torch_num_threads": 4
+}

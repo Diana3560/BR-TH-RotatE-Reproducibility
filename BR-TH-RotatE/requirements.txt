@@ -1,0 +1,14 @@
+# Environment used for the experiments reported in the manuscript.
+# Python 3.10.18; CUDA 12.8; NVIDIA GeForce RTX 5070 Laptop GPU.
+# The PyTorch build below is from the CUDA 12.8 nightly wheel index.
+--extra-index-url https://download.pytorch.org/whl/nightly/cu128
+
+torch==2.9.0.dev20250810+cu128
+pykeen==1.11.1
+numpy==1.26.4
+scipy==1.14.1
+pandas==2.2.3
+PyYAML==6.0.3
+filelock==3.20.0
+class_resolver==0.7.1
+pytest==8.3.5

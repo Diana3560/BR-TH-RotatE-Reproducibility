@@ -1,0 +1,118 @@
+{
+  "HAS_FAILURE": {
+    "head_types": [
+      "Component"
+    ],
+    "tail_types": [
+      "FailureMode"
+    ]
+  },
+  "DETECTED_BY": {
+    "head_types": [
+      "Component",
+      "FailureMode"
+    ],
+    "tail_types": [
+      "ProcessPlan"
+    ]
+  },
+  "LIMITED_BY": {
+    "head_types": [
+      "Component",
+      "FailureMode"
+    ],
+    "tail_types": [
+      "Standard"
+    ]
+  },
+  "FIXED_BY": {
+    "head_types": [
+      "FailureMode"
+    ],
+    "tail_types": [
+      "DispositionRule",
+      "ProcessPlan"
+    ]
+  },
+  "CAUSED_BY": {
+    "head_types": [
+      "FailureMode"
+    ],
+    "tail_types": [
+      "FaultCause"
+    ]
+  },
+  "HAS_SYMPTOM": {
+    "head_types": [
+      "FailureMode"
+    ],
+    "tail_types": [
+      "Symptom"
+    ]
+  },
+  "INDICATES": {
+    "head_types": [
+      "Symptom"
+    ],
+    "tail_types": [
+      "FailureMode"
+    ]
+  },
+  "APPLIES_UNDER": {
+    "head_types": [
+      "Standard"
+    ],
+    "tail_types": [
+      "ConditionRule"
+    ]
+  },
+  "HAS_DISPOSITION": {
+    "head_types": [
+      "Standard"
+    ],
+    "tail_types": [
+      "DispositionRule"
+    ]
+  },
+  "APPLIES_TO": {
+    "head_types": [
+      "TrainModel"
+    ],
+    "tail_types": [
+      "Component"
+    ]
+  },
+  "HAS_PART": {
+    "head_types": [
+      "Component"
+    ],
+    "tail_types": [
+      "Component"
+    ]
+  },
+  "HAS_STEP": {
+    "head_types": [
+      "ProcessPlan"
+    ],
+    "tail_types": [
+      "ProcessStep"
+    ]
+  },
+  "REQUIRES": {
+    "head_types": [
+      "ProcessPlan",
+      "ProcessStep"
+    ],
+    "tail_types": [
+      "ToolMaterial"
+    ]
+  },
+  "NEXT_STEP": {
+    "head_types": [
+      "ProcessStep"
+    ],
+    "tail_types": [
+      "ProcessStep"
+    ]
+  }
+}

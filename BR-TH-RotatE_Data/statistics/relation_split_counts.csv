@@ -1,0 +1,15 @@
+﻿relation,functional_group,train,validation,test,total
+HAS_FAILURE,diagnostic_semantic,1896,129,129,2154
+DETECTED_BY,diagnostic_semantic,1691,115,115,1921
+LIMITED_BY,diagnostic_semantic,1477,101,101,1679
+FIXED_BY,diagnostic_semantic,1342,91,91,1524
+CAUSED_BY,diagnostic_semantic,21,2,2,25
+HAS_SYMPTOM,diagnostic_semantic,34,2,2,38
+INDICATES,diagnostic_semantic,34,2,2,38
+APPLIES_UNDER,diagnostic_semantic,1214,43,42,1299
+HAS_DISPOSITION,diagnostic_semantic,1313,89,89,1491
+APPLIES_TO,diagnostic_semantic,52,3,3,58
+HAS_PART,procedural_structural,1941,132,132,2205
+HAS_STEP,procedural_structural,2065,141,141,2347
+REQUIRES,procedural_structural,826,56,56,938
+NEXT_STEP,procedural_structural,1507,103,103,1713

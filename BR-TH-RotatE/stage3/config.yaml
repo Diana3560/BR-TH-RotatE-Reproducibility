@@ -1,0 +1,57 @@
+stage3_protocol:
+  token: THROTATE_STAGE3_BASELINES_AND_CANDIDATES_V1
+  base_config: config/multidataset_comparison.yaml
+  pykeen_version: 1.11.1
+  validation_only_parameter_selection: true
+  test_locked_until_freeze: true
+  preserve_stage2_files: true
+  external_baseline_training_note: >-
+    RatE and CompoundE use their published scoring architectures under the project's
+    unified NSSA/Bernoulli/Adam/exact-3000-step protocol. This is a controlled baseline
+    comparison, not an exact reproduction of each paper's original optimizer/sampler.
+
+baselines:
+  models:
+    - RatE
+    - CompoundE
+    - TH-RotatE-Cap
+  validation_seed: 42
+  gamma_candidates: [3.0, 6.0, 12.0, 24.0]
+  formal_seeds: [42, 43, 44, 45, 46]
+  embedding_dim:
+    RatE: 200
+    CompoundE: 200
+  capacity_match:
+    target_model: D2
+    ownkg_target_delta_radians: 0.15
+    paper4_target_delta_radians: 0.05
+    scan_min_dim: 150
+    scan_max_dim: 260
+    rule: smallest_parameter_count_not_less_than_target
+
+candidate_sensitivity:
+  models: [D0, D1, A0, D2]
+  formal_seeds: [42, 43, 44, 45, 46]
+  fixed_gamma: 3.0
+  ownkg:
+    a0_delta_radians: 0.10
+    d2_delta_radians: 0.15
+    expected_full_candidates: 13693
+    expected_modeled_entity_candidates: 11653
+  spaces:
+    - full
+    - modeled_entities
+    - type_constrained
+  type_schema_source: training_split_only
+  filtered_truth: train_validation_test
+  metrics:
+    - mrr
+    - mr
+    - amri
+    - hits_at_1
+    - hits_at_3
+    - hits_at_10
+
+output:
+  baselines_directory: results/stage3_baselines
+  candidate_directory: results/stage3_candidate_sensitivity

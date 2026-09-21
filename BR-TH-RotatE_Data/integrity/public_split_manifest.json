@@ -1,0 +1,102 @@
+{
+  "dataset": "CRH-L4MKG",
+  "release": "data_audit_reproducibility_v1",
+  "split_seed": 20260826,
+  "seed_selection_rule": "calendar date of the frozen split protocol",
+  "split_method": "relation_stratified_split_with_training_entity_coverage",
+  "holdout_ratio_per_side": 0.06,
+  "counts": {
+    "train": 15413,
+    "validation": 1009,
+    "test": 1008
+  },
+  "reasoning14_entity_count": 11653,
+  "full_candidate_entity_count": 13693,
+  "all_reasoning14_entities_seen_in_training": true,
+  "per_relation": {
+    "HAS_FAILURE": {
+      "train": 1896,
+      "validation": 129,
+      "test": 129,
+      "total": 2154
+    },
+    "DETECTED_BY": {
+      "train": 1691,
+      "validation": 115,
+      "test": 115,
+      "total": 1921
+    },
+    "LIMITED_BY": {
+      "train": 1477,
+      "validation": 101,
+      "test": 101,
+      "total": 1679
+    },
+    "FIXED_BY": {
+      "train": 1342,
+      "validation": 91,
+      "test": 91,
+      "total": 1524
+    },
+    "CAUSED_BY": {
+      "train": 21,
+      "validation": 2,
+      "test": 2,
+      "total": 25
+    },
+    "HAS_SYMPTOM": {
+      "train": 34,
+      "validation": 2,
+      "test": 2,
+      "total": 38
+    },
+    "INDICATES": {
+      "train": 34,
+      "validation": 2,
+      "test": 2,
+      "total": 38
+    },
+    "APPLIES_UNDER": {
+      "train": 1214,
+      "validation": 43,
+      "test": 42,
+      "total": 1299
+    },
+    "HAS_DISPOSITION": {
+      "train": 1313,
+      "validation": 89,
+      "test": 89,
+      "total": 1491
+    },
+    "APPLIES_TO": {
+      "train": 52,
+      "validation": 3,
+      "test": 3,
+      "total": 58
+    },
+    "HAS_PART": {
+      "train": 1941,
+      "validation": 132,
+      "test": 132,
+      "total": 2205
+    },
+    "HAS_STEP": {
+      "train": 2065,
+      "validation": 141,
+      "test": 141,
+      "total": 2347
+    },
+    "REQUIRES": {
+      "train": 826,
+      "validation": 56,
+      "test": 56,
+      "total": 938
+    },
+    "NEXT_STEP": {
+      "train": 1507,
+      "validation": 103,
+      "test": 103,
+      "total": 1713
+    }
+  }
+}

@@ -1,0 +1,24 @@
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.venv/
+venv/
+.idea/
+.vscode/
+
+# Datasets are distributed/managed separately from this code repository.
+external_data/
+
+# Generated experiment outputs. Curated manuscript tables under results/manuscript are tracked.
+results/multidataset_comparison/
+results/stage3_baselines/
+results/stage3_candidate_sensitivity/
+results/feature_ablation/
+results/supplementary_runs/
+results/supplementary_SMOKE/
+results/per_relation_bounded_angle/
+results/per_relation_angle_SMOKE/
+
+results/generated/
+results/SUPPLEMENTARY_LATEST.json
+results/SUPPLEMENTARY_SMOKE_LATEST.json

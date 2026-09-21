@@ -1,0 +1,51 @@
+{
+  "status": "PASS",
+  "dataset": "CRH-L4MKG",
+  "counts": {
+    "full17_triples": 24768,
+    "candidate_entities": 13693,
+    "all_typed_nodes": 13696,
+    "r14_union_triples": 17430,
+    "train": 15413,
+    "validation": 1009,
+    "test": 1008,
+    "modeled_entities": 11653,
+    "relations_full17": 17,
+    "relations_r14": 14
+  },
+  "duplicates": {
+    "full17": 0,
+    "train": 0,
+    "validation": 0,
+    "test": 0
+  },
+  "split_overlaps": {
+    "train_validation": 0,
+    "train_test": 0,
+    "validation_test": 0
+  },
+  "split_union_is_subset_of_full17": true,
+  "all_r14_entities_seen_in_training": true,
+  "all_14_relations_seen_in_each_split": {
+    "train": true,
+    "validation": true,
+    "test": true
+  },
+  "typed_entities_outside_full_graph": [
+    "C_2515",
+    "C_2516",
+    "T_235"
+  ],
+  "type_constrained_schema_source": "training_split_only",
+  "type_constrained_gold_coverage": {
+    "status": "PASS",
+    "violations": []
+  },
+  "source_sha256": {
+    "full17_all_triples.tsv": "fd80cc4bcf4c9015280dbfa270595e7cc1fcd21c94e2112dbcb213bf3c0bc182",
+    "entity_types.tsv": "164728eb94c81db263d709e03a8b4a4616e20e7a8bffc9af8957a3f1ad849ab5",
+    "train.tsv": "f58eb055906f38441b6401e84c0714dcfd5204a8b4a696e38e26c1ef10f45340",
+    "valid.tsv": "3915a2574aa414db2e08f12488e6f805c8c0f9bf3d1023f6bf3564298db5a345",
+    "test.tsv": "9b6ad9a6579ba48b6eda21df1aa3ccfad344a26b9e20cb4ba8aada0591bb4bbf"
+  }
+}

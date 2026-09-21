@@ -1,0 +1,174 @@
+project_name: throtate_two_dataset_comparison
+protocol_version: 1.0
+protocol:
+  token: THROTATE_MULTIDATASET_COMPARISON_V1
+  pykeen_version: 1.11.1
+  validation_only_parameter_selection: true
+  no_test_parameter_selection: true
+  filtered_evaluation: true
+  both_side_ranking: true
+  dataset_isolated_outputs: true
+  cache_requires_full_experiment_fingerprint: true
+model:
+  embedding_dim: 200
+  transh_norm: 2
+  transh_power_norm: false
+  rotate_norm: 2
+training:
+  loss: NSSA
+  gamma: 3.0
+  adversarial_temperature: 1.0
+  optimizer: Adam
+  learning_rate: 0.001
+  max_steps: 3000
+  batch_size: 1024
+  num_negatives: 64
+  evaluation_batch_size: 10
+  negative_sampler_filtered: false
+  drop_last: true
+  device: auto
+validation_search:
+  baseline_seed: 42
+  baseline_gamma_candidates:
+  - 3.0
+  - 6.0
+  - 12.0
+  - 24.0
+  d2_delta_candidates_radians:
+  - 0.05
+  - 0.1
+  - 0.15
+  d2_delta_seeds:
+  - 42
+  - 43
+  - 44
+  - 45
+  - 46
+  primary_metric: mrr
+  secondary_metric: hits_at_1
+  tie_break: smaller_parameter
+formal:
+  models:
+  - TransH
+  - RotatE
+  - D0
+  - D1
+  - A0
+  - D2
+  seeds:
+  - 42
+  - 43
+  - 44
+  - 45
+  - 46
+output:
+  directory: results/multidataset_comparison
+datasets:
+  ownkg:
+    display_name: CRH-L4MKG
+    identity_note: CRH-L4MKG experiment metadata. Dataset files are not bundled with
+      this code repository.
+    full_file: external_data/crh_l4mkg/full17_all_triples.tsv
+    entity_types_file: external_data/crh_l4mkg/entity_types.tsv
+    split_dir: external_data/crh_l4mkg/fixed_split
+    train_filename: train.tsv
+    validation_filename: valid.tsv
+    test_filename: test.tsv
+    modeled_relations:
+    - HAS_FAILURE
+    - DETECTED_BY
+    - LIMITED_BY
+    - FIXED_BY
+    - CAUSED_BY
+    - HAS_SYMPTOM
+    - INDICATES
+    - APPLIES_UNDER
+    - HAS_DISPOSITION
+    - APPLIES_TO
+    - HAS_PART
+    - HAS_STEP
+    - REQUIRES
+    - NEXT_STEP
+    relation_roles:
+      HAS_FAILURE: diagnostic_semantic
+      DETECTED_BY: diagnostic_semantic
+      LIMITED_BY: diagnostic_semantic
+      FIXED_BY: diagnostic_semantic
+      CAUSED_BY: diagnostic_semantic
+      HAS_SYMPTOM: diagnostic_semantic
+      INDICATES: diagnostic_semantic
+      APPLIES_UNDER: diagnostic_semantic
+      HAS_DISPOSITION: diagnostic_semantic
+      APPLIES_TO: diagnostic_semantic
+      HAS_PART: procedural_structural
+      HAS_STEP: procedural_structural
+      REQUIRES: procedural_structural
+      NEXT_STEP: procedural_structural
+    expected:
+      candidate_entities: 13693
+      mapping_relations: 17
+      modeled_relations: 14
+      full_triples: 24768
+      train_triples: 15413
+      validation_triples: 1009
+      test_triples: 1008
+      split_union_triples: 17430
+      validation_relations: 14
+      test_relations: 14
+    sha256:
+      full: fd80cc4bcf4c9015280dbfa270595e7cc1fcd21c94e2112dbcb213bf3c0bc182
+      entity_types: 164728eb94c81db263d709e03a8b4a4616e20e7a8bffc9af8957a3f1ad849ab5
+      train: f58eb055906f38441b6401e84c0714dcfd5204a8b4a696e38e26c1ef10f45340
+      validation: 3915a2574aa414db2e08f12488e6f805c8c0f9bf3d1023f6bf3564298db5a345
+      test: 9b6ad9a6579ba48b6eda21df1aa3ccfad344a26b9e20cb4ba8aada0591bb4bbf
+  paper4:
+    display_name: CROEFKG external validation dataset
+    identity_note: CROEFKG experiment metadata. Dataset files are not bundled with
+      this code repository.
+    full_file: external_data/croefkg/all_triples.tsv
+    entity_types_file: external_data/croefkg/entity_types.tsv
+    relation_schema_file: external_data/croefkg/relation_schema.tsv
+    dataset_stats_file: external_data/croefkg/dataset_stats.json
+    split_dir: external_data/croefkg/fixed_split
+    train_filename: train.tsv
+    validation_filename: valid.tsv
+    test_filename: test.tsv
+    modeled_relations:
+    - caused_by
+    - result_in
+    - fault_category_is
+    - responsible_system_is
+    - measure_taken
+    - fault_location_is
+    - occur_at_time
+    - occur_on_train
+    - occur_on_line
+    relation_roles:
+      caused_by: diagnostic_semantic
+      result_in: diagnostic_semantic
+      fault_category_is: diagnostic_semantic
+      responsible_system_is: diagnostic_semantic
+      measure_taken: diagnostic_semantic
+      fault_location_is: diagnostic_semantic
+      occur_at_time: procedural_structural
+      occur_on_train: procedural_structural
+      occur_on_line: procedural_structural
+    expected:
+      candidate_entities: 8105
+      mapping_relations: 9
+      modeled_relations: 9
+      full_triples: 13728
+      train_triples: 10982
+      validation_triples: 1373
+      test_triples: 1373
+      split_union_triples: 13728
+      validation_relations: 8
+      test_relations: 8
+    sha256:
+      full: 0687fbaa696dad9c3c855d3680a7cb87ebdca2d40825b604fe708fe31c773646
+      entity_types: fffca06bacf48d3a22a05c148aa96903103078741c86a1251afc4ec117c00c5a
+      train: 4faa7cdfce049dada1c3d42c25a744985c3981410383f38c746b257f788b8435
+      validation: 82a55588754f95b3c3ac8bf2c694b3effe9660e42c7e4efa538719a108368b33
+      test: 6fb0a3dabf0e29d8892c45b34704c9f8af44b8c44c24a1fc987388b958ce4d40
+      relation_schema: 4fe44100c664301a9fcaec180a1f03c085056dd8df72e4bb825e857f51d9254d
+      dataset_stats: dbeb8e00a75b3118ddda326e9af86bdc8fbcd5858e5a80a33d3c0534c4b980e8

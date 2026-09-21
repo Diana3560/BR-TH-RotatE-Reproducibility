@@ -1,0 +1,14 @@
+﻿entity_type,count
+TrainModel,6
+Component,2260
+FailureMode,2087
+Symptom,12
+FaultCause,6
+Standard,1624
+ConditionRule,1214
+DispositionRule,1221
+ProcessPlan,611
+ProcessStep,2324
+ToolMaterial,291
+DocumentSource,1
+DocumentChunk,2039
